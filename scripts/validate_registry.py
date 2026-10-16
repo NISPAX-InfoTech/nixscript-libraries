@@ -8,8 +8,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.txt"
 NAME_PATTERN = re.compile(r"^[a-z][a-z0-9_]{0,63}$")
-VERSION_PATTERN = re.compile(r"^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$")
-MAIN_PATTERN = re.compile(r"(?m)^\\s*nix\\s+main\\s*\\(")
+VERSION_PATTERN = re.compile(r"^(0|[1-9][0-9]*)[.](0|[1-9][0-9]*)[.](0|[1-9][0-9]*)$")
+MAIN_PATTERN = re.compile(r"(?m)^[ \\t]*nix[ \\t]+main[ \\t]*[(]")
 
 
 def main() -> int:
